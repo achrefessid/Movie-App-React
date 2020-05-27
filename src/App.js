@@ -12,7 +12,7 @@ const App = () => (
       <Navbar />
       <Route  path='/movieapp' component={MovieApp} />    
       <Route exact path='/favorite' component={Favorite} /> 
-      </BrowserRouter>
+    </BrowserRouter>
 
   </div>
 );

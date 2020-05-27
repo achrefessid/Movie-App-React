@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import NameFilter from './NameFilter'
 import RatingFilter from './RatingFilter'
 import MovieList from './MovieList'
+import { CubeGrid } from 'styled-loaders-react';
+
 /*-----------------------------------------------------------------------------*/
 const inception = {
   id: 'Inceptionnnn',  title: 'Inception', rating: 1, year: 2010,
@@ -32,7 +34,8 @@ class MovieApp extends Component {
     this.state = {
       minRatingFilter: 3,
       movies: moviesToDisplay,
-      titleFilter: ''
+      titleFilter: '',
+      loading: true
     }
   }
 /*------------------*/
@@ -41,7 +44,6 @@ addNewMovie(newMovie) {
     movies: this.state.movies.concat(newMovie)
   })
 }
-
 /*------------------*/
   getVisibleMovies() {
     return this.state.movies.filter(
@@ -52,20 +54,22 @@ addNewMovie(newMovie) {
         )
       )
   }
-  /*----------------------------------------------------------------- */
-deleteCourse = (index) => {
-  let courses = this.state.courses;
-  courses.splice(index, 1);
-  this.setState({
-    courses
-  })
+ /*------------------*/
+//loader
+componentDidMount = () => {
+  setTimeout(() => {
+    this.setState({
+      loading: false
+    })
+  }, 3000)
 }
-
-
-
-  /* */
-  render() {
+/*-----------------------------------------------------------------*/
+render() {
     return (
+      <React.Fragment>
+      {
+        this.state.loading ? <CubeGrid color="black" /> : 
+
       <div className="movie-app">
 
         <header className="movie-app-header">
@@ -90,6 +94,8 @@ deleteCourse = (index) => {
                 />
         </main>
       </div>
+}
+</React.Fragment>
     )
   }
 }
