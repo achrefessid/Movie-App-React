@@ -1,0 +1,152 @@
+
+.movie-app {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.movie-app-header {       
+  display: flex;
+  justify-content: space-between;
+  background-color: white; /*background serach*/
+}
+
+
+
+/*
+.name-filter {
+  height: 50px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0 10px;
+}*/
+/*
+.name-filter-text {
+  flex: 1;
+  border: 2px solid black; /*border search
+  padding: 5px 10px;;
+}
+*/
+
+
+/*
+.name-filter-button {
+  border: 2px solid black;
+  border-left: none;
+  background-color: transparent;
+  padding: 0 10px;
+}*/
+
+
+
+.rating-filter {    /*njoum et kiktiba ili fo9o*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+}
+.rating-filter-text {
+  font-size: 0.8em;
+}
+/**/
+.movie-app-main {
+  margin-top: 20px;
+}
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie-card,
+.new-movie-card {
+  border: 2px solid black;  /*border cadre film kol*/
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.movie-rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border: 2px solid black; /*border njoum*/
+  background-color: brown;
+  border-top: none;
+  border-right: none;
+}
+.movie-image {
+  background-image: url(https://www.mearto.com/assets/no-image-83a2b680abc7af87cfff7777d0756fadb9f9aecd5ebda5d34f8139668e0fc842.png);
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.movie-description {
+  border-top: 2px solid black;
+  text-align: center;
+  padding: 10px;
+}
+.new-movie-card {
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/**/
+.form {
+  display:grid;
+}
+.label {
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+
+}
+.input {
+  font-size: 1.1rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.button {
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0,0,0,0.75);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+.button:hover {
+  background-color: rgba(0,0,0,0.85);
+}
+@media (min-width:786px){
+  .form {
+      grid-template-columns: auto 1fr auto;
+      grid-gap: 1rem;
+      align-items: center;
+  }
+  
+  .input {
+      margin-bottom: 0;
+  }
+}
+
+.card-list {
+  margin-top: 4rem;
+}
+
+
+
